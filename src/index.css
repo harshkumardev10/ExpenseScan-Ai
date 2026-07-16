@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-slate-950 text-slate-100 font-sans antialiased min-h-screen selection:bg-blue-600 selection:text-white;
+    background-image: 
+      radial-gradient(at 0% 0%, rgba(30, 41, 59, 0.3) 0, transparent 50%),
+      radial-gradient(at 100% 0%, rgba(15, 23, 42, 0.4) 0, transparent 50%),
+      radial-gradient(at 50% 100%, rgba(2, 6, 23, 0.8) 0, transparent 50%);
+  }
+  
+  #root {
+    @apply min-h-screen flex flex-col;
+    max-width: 100% !important;
+    width: 100% !important;
+    margin: 0 !important;
+    border: none !important;
+    text-align: left !important;
+  }
+}
+
+/* Custom Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-slate-950;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-slate-800 rounded-full hover:bg-slate-700 transition-colors;
+}
+
+/* Backdrop Blur Glass Utilities */
+.glass-panel {
+  @apply bg-slate-900/70 backdrop-blur-lg border border-slate-800/80 shadow-2xl;
+}
+
+.glass-card {
+  @apply bg-slate-900/40 backdrop-blur-md border border-slate-800/50 hover:border-slate-700/50 hover:bg-slate-900/60 transition-all duration-300 shadow-lg;
+}
+
+/* Glow Effect */
+.glow-primary {
+  @apply shadow-[0_0_20px_rgba(59,130,246,0.15)];
+}
